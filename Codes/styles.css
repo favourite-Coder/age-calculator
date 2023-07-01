@@ -1,8 +1,168 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
 
-body{
-  font-family: 'Poppins', sans-serif;
+:root{
+  --Purple: hsl(259, 100%, 65%);
+  --Light:  hsl(0, 100%, 67%);
 
+  /*Neutral*/
+
+--White: hsl(0, 0%, 100%);
+--Off_white: hsl(0, 0%, 94%);
+--Light_grey: hsl(0, 0%, 86%);
+--Smokey_grey: hsl(0, 1%, 44%);
+--Off_black: hsl(0, 0%, 8%);
+--black: black;
+}
+  *{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+body{
+  background-color: var(--Light_grey);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background-color: var(--White);
+  width: 500px;
+  border-radius: 10px 10px 100px 10px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+}
+
+.cal_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+.form_container{
+  display: flex;
+  gap: 20px;
+}
+.input_col{
+  flex-direction: column;
+}
+
+.input_col label{
+   text-transform: uppercase;
+   font-weight: 600;
+   font-size: 15px;
+   color: var(--Smokey_grey);
+
+}
+input{
+ font-size: 15px;
+ padding: 5px;
+ width: 100px;
+ border-radius: 5px;
+ border: 1px solid var(--Smokey_grey);
+ display: flex;
+ background-color: var(--White);
+ align-items: center;
+ margin-bottom: 12px;
+
+}
+input::placeholder{
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--Smokey_grey);
+}
+.submit_col{
+  display: flex;
+  text-align: center;
+}
+.submit_col hr{
+  width: 100%;
+  height: 20px;
+  margin-top: 15px;
+  border-top: 10px;
+}
+.submit_col .submit_btn{
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--Purple);
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+
+.answer h1{
+  font-weight: 800;
+  font-style: italic;
+  font-size: 50px;
+  height: fit-content;
+}
+.answer span{
+  color: var(--Purple);
+
+}
+
+small{
+  color: var(--Light)
+}
+.attribution {
+  position: absolute; 
+  bottom: 10px; 
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.attribution a{
+ color: black;
+ text-decoration: none;
+ font-style: italic;
+ font-weight: bold;
+}
+.attribution a:hover{
+  color: blue;
+}
+
+
+
+@media screen and (max-width: 600px)  {
+  .calculator{
+    width: 360px;
+  }
+  .cal_container{
+    padding: 10px;
+  }
+  .form_container{
+    margin-bottom: 50px;
+    gap: 0;
+    justify-content: space-between;
+  }
+  .submit_col{
+    position: relative;
+  }
+  .submit_btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .answer{
+    margin-top: 50px;
+  }
+  .answer h1{
+    font-size: 40px;
+  }
 }
 
 
@@ -37,5 +197,8 @@ body{
 
 
 
-.attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+
